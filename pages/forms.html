@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Formulario - Experiencia 2</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">Home</a>
+            </div>
+        
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li>
+                            <h2 class="centrar">Formulario - Experiencia 2</h2>
+                        </li>
+                        <li>
+                            <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Rellenar formulario</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Nuevo formulario</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-edit fa-fw"></i>
+                            Información personal y demás
+                        </div>
+                        <div class="panel-body">
+                            <form enctype="multipart/form-data" method="post" action="enviar.php" accept-charset="UTF-8">
+            <!-- Hidden -->
+            <input type="hidden" name="enviado" value="1">
+                <!-- Texto -->
+                <div class="form-group">
+                  <b>Nombre</b>
+                  <input type="text" class="form-control" name="nombre" placeholder="Ingrese su nombre" required>
+                </div>
+                <!-- Texto -->
+                <div class="form-group">
+                  <b>Apellido</b>
+                  <input type="text" class="form-control " name="apellido" placeholder="Ingrese su Apellido" required>
+                </div>
+                <!-- Texto -->
+                <div class="form-group">
+                  <b>Fecha de nacimiento</b>
+                  <input type="text" class="form-control " name="fechanacimiento" placeholder="día-mes-año" required>
+                </div>
+                <div class="form-group">
+                  <b>Sexo</b><br />
+                  <input type="radio" name="sexo" value="m" required> Masculino<br />
+                  <input type="radio" name="sexo" value="f" required> Femenino<br />
+                </div>
+                <!-- Select -->
+                <div class="form-group">
+                  <b>Región</b><br />
+                  <select name="region" class="form-control">
+                    <option value="">Seleccione región</option>
+                    <option value="XV">XV de Arica y Parinacota</option>
+                    <option value="I">I de Tarapacá</option>
+                    <option value="II">II de Antofagasta</option>
+                    <option value="III">III de Atacama</option>
+                    <option value="IV">IV de Coquimbo</option>
+                    <option value="V">V de Valparaíso</option>
+                    <option value="VI">VI del Libertador Bernardo O'Higgins</option>
+                    <option value="VII">VII del Maule</option>
+                    <option value="VIII">VIII del Bío Bío</option>
+                    <option value="IX">IX de la Araucanía</option>
+                    <option value="XIV">XIV de los Ríos</option>
+                    <option value="X">X de los Lagos</option>
+                    <option value="XI">XI Aisén del General Carlos Ibáñez del Campo</option>
+                    <option value="XII">XII de Magallanes y Antártica Chilena</option>
+                    <option value="M">Metropolitana de Santiago</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                    <b>Áreas de interés:</b><br />
+                    <input type="checkbox" name="check_list[]" value="Ciencias"> Ciencias<br />
+                    <input type="checkbox" name="check_list[]" value="Deportes"> Deportes<br />
+                    <input type="checkbox" name="check_list[]" value="Pintura rupestre"> Pintura rupestre<br />
+                    <input type="checkbox" name="check_list[]" value="Videos de gatos"> Videos de gatos<br />
+                </div> 
+                                <!-- Email -->
+                <div class="form-group">
+                  <b>Página personal: </b>
+                  <input type="url" class="form-control" name="pagina"
+                  placeholder="http://....">
+                </div>
+                <!-- Email -->
+                <div class="form-group">
+                  <b>Correo electrónico</b>
+                  <input type="email" class="form-control" name="correo"
+                  placeholder="correo@dominio">
+                </div>
+                <!-- Text -->
+                <div class="form-group">
+                  <b>Color favorito</b>
+                  <input type="text" class="form-control" name="color"
+                  placeholder="Ingrese su color favorito">
+                </div>
+                                <hr>
+            <div class="panel-footer">
+        <div class="text-right">
+          <a href="forms.html" class="btn btn-primary">
+            <i class="glyphicon glyphicon-repeat"></i>
+            Reiniciar
+          </a>
+          <!-- Button submit -->
+          <button type="submit" class="btn btn-success">
+            Enviar
+            <i class="glyphicon glyphicon-menu-right"></i>
+          </button>
+        </div>
+      </div>
+          </form>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../dist/js/sb-admin-2.js"></script>
+
+</body>
+
+</html>
